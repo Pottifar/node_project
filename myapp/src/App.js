@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './Components/Login';
 import Register from './Components/Registrer';
-import 'App.css';
+import './App.css';
 
 function App() {
   return (
