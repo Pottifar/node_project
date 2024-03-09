@@ -3,12 +3,14 @@ import axios from 'axios';
 
 function App() {
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const payload = {
-      username
+      username,
+      password
     };
 
     const response = await axios({
@@ -20,6 +22,7 @@ function App() {
     alert(response.data.message);
 
     setUsername("");
+    setPassword("");
   };
 
   return (
@@ -30,6 +33,12 @@ function App() {
           value={username}
           onChange={e => setUsername(e.target.value)}
           placeholder="Username"
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          placeholder="Password"
         />
         <button type="submit">Login</button>
       </form>
