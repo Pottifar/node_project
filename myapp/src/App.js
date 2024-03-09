@@ -1,6 +1,6 @@
 import React from 'react';
-import Login from '../../Components/Login';
-import Register from '../../Register';
+import Login from './Components/Login';
+import Register from './Components/Register';
 
 function App() {
   return (
